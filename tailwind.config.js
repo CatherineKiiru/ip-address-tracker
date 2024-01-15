@@ -8,11 +8,7 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
-    colors: {
-      veryDarkGray: "#2b2b2b",
-      darkGray: "#969696",
-      white: "#ffffff"
-    },
+    
     fontFamily: {
       sans: ["Rubik", "sans-serif"],
     },
@@ -20,6 +16,11 @@ export default {
       backgroundImage: {
         "desktop-image": "url(img/pattern-bg-desktop.png)",
         "mobile-image": "url(img/pattern-bg-mobile.png)",
+      },
+      colors: {
+        veryDarkGray: "#2b2b2b",
+        darkGray: "#969696",
+        white: "#ffffff",
       },
     },
 
