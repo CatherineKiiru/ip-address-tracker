@@ -52,8 +52,10 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - [React](https://reactjs.org/) - JS library
 - [Material UI](https://mui.com/material-ui/react-text-field/)
-- [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/)
-[React Testing Library](https://docs.mapbox.com/mapbox-gl-js/guides/)
+- [IP Geolocation API by Ipify](https://geo.ipify.org/) - For retrieving IP Address locations
+- [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/) - For generating interactive maps
+- [React Testing Library](https://docs.mapbox.com/mapbox-gl-js/guides/)
+
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox

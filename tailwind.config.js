@@ -1,11 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    screens: {
+      sm: "375px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
+    colors: {
+      veryDarkGray: "#2b2b2b",
+      darkGray: "#969696",
+      white: "#ffffff"
+    },
+    fontFamily: {
+      sans: ["Rubik", "sans-serif"],
+    },
+    extend: {
+      backgroundImage: {
+        "desktop-image": "url(img/pattern-bg-desktop.png)",
+        "mobile-image": "url(img/pattern-bg-mobile.png)",
+      },
+    },
+
+    plugins: [],
   },
-  plugins: [],
-}
+};
