@@ -1,68 +1,27 @@
-import { useState } from "react";
+import LoadingMessage from "./loadingMessage";
+import Spinner from './Spinner'
 
-const addressObj = {
-  ip: ip,
-  location: {
-    region: region,
-    timezone: timezone,
-    city: city,
-  }
-
-
-}
-
-const Address = () => {
-  const [loading, setLoading] = useState(false);
-  const [address, setAddress] = useState("");
-  const [error, setError] = useState<addressObj[]>([]);
-
+//The address component needs to have three states: the loading state, the rendered address, and an error state
+// eslint-disable-next-line no-unused-vars
+const Address = (address, loading, error) => {
   return (
-    <div
-    className={`bg-white rounded-[1rem] w-full h-full shadow-md p-6  flex justify-center items-center`}
-  >
-    {loading && (
-      <div className="flex gap-4">
-        <p className="w-8 h-8 border-t-4 rounded-full border-vDarkGray animate-spin"></p>
-        <p className="text-2xl font-bold text-vDarkGray animate-pulse">
-          Please Wait....
-        </p>
-      </div>
-    )}
-    {!loading && error == 2 && (
-      <div className="text-2xl font-bold text-center text-vDarkGray animate-bounce">
-        Failed To Fetch Data
-      </div>
-    )}
-    {!loading && error == 1 && (
-      <div className="text-2xl font-bold text-center text-vDarkGray animate-bounce">
-        Incorrect Domain or IP Provided{" "}
-      </div>
-    )}
-    {!loading && error == 0 && (
-      <main className="flex flex-col items-center justify-center gap-6 text-center md:justify-evenly md:gap-20 md:flex-row">
-        <div>
-          <h3 className="text-sm font-extrabold text-DarkGray">IP ADDRESS</h3>
-          <p className="text-xl font-black">{address.ip}</p>
-        </div>
-        <div className="md:pl-6 md:border-l md:border-l-DarkGray">
-          <h3 className="text-sm font-extrabold text-DarkGray">LOCATION</h3>
-          <p className="text-xl font-black">
-            {address?.location?.region || "Unknown Region"}
-          </p>
-        </div>
-        <div className="md:pl-6 md:border-l md:border-l-DarkGray">
-          <h3 className="text-sm font-extrabold text-DarkGray">TIMEZONE</h3>
-          <p className="text-xl font-black">
-            {address?.location?.timezone || "Unknown Timezone"}
-          </p>
-        </div>
-        <div className="md:pl-6 md:border-l md:border-l-DarkGray">
-          <h3 className="text-sm font-extrabold text-DarkGray">ISP</h3>
-          <p className="text-xl font-black">{address.isp}</p>
-        </div>
-      </main>
-    )}
-  </div>
+    <>
+      <section className="absolute mx-auto left-0 right-0 max-w-sm md:max-w-xl lg:max-w-5xl top-[20rem] bg-white rounded-[1rem] shadow-md">
+        {/* define loading states and error boundaries */}
+        {loading && (
+          <div className="flex gap-4 items-center">
+            <Spinner/>
+            <LoadingMessage />
+          </div>
+        )}
+        <main className="block md:flex justify-center text-center py-12">
+          <div>Address</div>
+          <div>location</div>
+          <div>Timezone</div>
+          <div>ISP</div>
+        </main>
+      </section>
+    </>
   );
 };
 

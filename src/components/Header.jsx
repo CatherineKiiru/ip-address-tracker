@@ -7,7 +7,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const Header = () => {
   return (
     <>
-      <section className="relative p-12 bg-mobile-image bg-no-repeat bg-cover md:bg-desktop-image h-auto max-w-full ">
+      <section className="relative p-24 bg-mobile-image bg-no-repeat bg-cover md:bg-desktop-image h-auto max-w-full ">
         <header className="text-white pt-14 text-center pb-12">
           IP Address Tracker
         </header>
@@ -29,7 +29,6 @@ const Header = () => {
             </IconButton>
           </div>
         </Paper>
-        
       </section>
       
     </>
