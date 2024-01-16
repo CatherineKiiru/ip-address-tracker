@@ -1,14 +1,21 @@
+import { useState } from "react";
+
+const addressObj = {
+  ip: ip,
+  location: {
+    region: region,
+    timezone: timezone,
+    city: city,
+  }
 
 
+}
 
-// Create an interface to define the structure of our object & props
-// Or Declare state variables for the different states of the address function
+const Address = () => {
+  const [loading, setLoading] = useState(false);
+  const [address, setAddress] = useState("");
+  const [error, setError] = useState<addressObj[]>([]);
 
-// const [address, setAddress] = useState("");
-// const [isLoading, setIsLoading] = useState(false);
-// const [error, setError] = useState("")
-
-const Address = (address, loading, error) => {
   return (
     <div
     className={`bg-white rounded-[1rem] w-full h-full shadow-md p-6  flex justify-center items-center`}
