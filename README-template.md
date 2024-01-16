@@ -51,6 +51,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - [React](https://reactjs.org/) - JS library
+- [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html#interfaces)
 - [Material UI](https://mui.com/material-ui/react-text-field/)
 - [IP Geolocation API by Ipify](https://geo.ipify.org/) - For retrieving IP Address locations
 - [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/) - For generating interactive maps
