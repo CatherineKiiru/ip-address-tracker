@@ -10,30 +10,33 @@ const AddressBox = () => {
     ISP: "Vijiji Connect",
   };
 
+  const pClasses = 'font-semibold text-2xl'
+  const hClasses = 'text-darkGray uppercase font-semibold'
+
   // const [addressDetails, setAddressDetails] = useState(addressObj())
   return (
     <>
-      <section className="p-12 absolute mx-auto justify-center right-0 left-0 max-w-sm md:max-w-xl lg:max-w-5xl top-[20rem] bg-white rounded-[1rem] shadow-md">
+      <section className="p-12 absolute mx-auto justify-center items-center right-0 left-0 max-w-sm md:max-w-xl lg:max-w-5xl top-[20rem] bg-white rounded-[1rem] shadow-md">
         {
-          <main className="grid md:grid-cols-4 md:divide-x-2 justify-between text-center  py-12">
-            <div>
-              <div>Address</div>
-              <p>{address.ip}</p>
+          <main className="mx-auto gap-4 grid md:grid-cols-4  md:divide-x-2 md:justify-between text-center">
+            <div className="">
+              <h1 className={hClasses}>IP Address</h1>
+              <p className={pClasses}>{address.ip}</p>
             </div>
 
             <div>
-              <div>location</div>
-              <p>{address.location}</p>
+              <h1 className={hClasses}>location</h1>
+              <p className={pClasses}>{address.location}</p>
             </div>
 
             <div>
-              <div>Timezone</div>
-              <p>{address.timezone}</p>
+              <h1 className={hClasses}>Timezone</h1>
+              <p className={pClasses}>{address.timezone}</p>
             </div>
 
             <div>
-              <div>ISP</div>
-              <p>{address.ISP}</p>
+              <h1 className={hClasses}>ISP</h1>
+              <p className={pClasses}>{address.ISP}</p>
             </div>
           </main>
         }

@@ -20,6 +20,7 @@ export default {
       colors: {
         veryDarkGray: "#2b2b2b",
         darkGray: "#969696",
+        neutralGray: "#48494b",
         white: "#ffffff",
       },
     },
