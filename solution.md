@@ -33,3 +33,17 @@ This will hold the functionality for rendering the API data.
 
 Pass in props in the address function and call them in the return statement. This does not use TypeScript
 
+## How many user events do we have?
+
+1. Onclick - this is the button that the user clicks to render the IP address data.
+
+2. When they click on the button, the event should fetch data from the backend and render the data on the frontend
+
+3. The search input recies a number or domain, then returns 4 data values i.e.
+
+    - IP address
+    - Location
+    - Timezone
+    - ISP
+
+4. The data returned should also point to the specific location on the map

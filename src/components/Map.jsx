@@ -10,8 +10,6 @@ const Map = (address, loading, success, error) => {
     zoom: 9, 
   });
 
-
-
   return <div>
     
   </div>;
