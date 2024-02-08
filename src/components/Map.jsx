@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import mapboxgl from "mapbox-gl"; // or "const mapboxgl = require('mapbox-gl');"
 import React, { useRef, useEffect, useState } from "react";
 
@@ -26,6 +27,7 @@ export default function Map() {
       setLat(map.current.getCenter().lat.toFixed(4));
       setZoom(map.current.getZoom().toFixed(2));
     });
+    
   });
 
   return (

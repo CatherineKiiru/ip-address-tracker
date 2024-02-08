@@ -1,16 +1,39 @@
-// import * as React from 'react';
+/* eslint-disable no-undef */
+import { useState, useEffect } from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const Header = () => {
+  const [addressData, setAddressData] = useState([]);
+  const [input, setInput] = useState('');
+  const url = "https://geo.ipify.org/api/v2/"
+  const API_KEY = "at_yziwQqxxgNwkeIJWAW8ugR6JfNCam"
+  
+  const fetchData = async () => {
+    const response = await fetch (url, {
+      headers: {
+        method: POST,
+        API_KEY,
+      }
+    }) 
+    const addressData = response.json()
+    
+    console.log(addressData)   
+    setAddressData(addressData)
+  }
+
+  useEffect(() => {
+    fetchData
+  }, [addressData])
+   
   return (
     <>
       <section className="relative p-24 bg-mobile-image bg-no-repeat bg-cover md:bg-desktop-image h-auto">
-        <header className="text-white p-12 text-center ">
+        <h1 className="text-white p-12 text-center ">
           IP Address Tracker
-        </header>
+        </h1>
 
         
         <Paper
@@ -21,6 +44,9 @@ const Header = () => {
           <InputBase
             sx={{ ml: 2, flex: 1 }}
             placeholder="Search for any IP address or domain"
+            type="text"
+            value={input}
+            onChange={setInput}
           />
 
           <div className="bg-veryDarkGray rounded-r-xl">

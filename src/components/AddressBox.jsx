@@ -1,37 +1,12 @@
-/* eslint-disable no-undef */
-import { useEffect, useState } from "react";
-// import LoadingMessage from "./loadingMessage";
-// import Spinner from "./Spinner";
-
-
 
 const AddressBox = () => {
-  const [addressData, setAddressData] = useState([]);
+  
   const address = {
     ip: "102.219.210.194",
     location: "Nairobi",
     timezone: "EAT",
     ISP: "Vijiji Connect",
   };
-  const url = "https://geo.ipify.org/api/v2/"
-  const API_KEY = "at_yziwQqxxgNwkeIJWAW8ugR6JfNCam"
-  
-  const fetchData = async () => {
-    const response = await fetch (url, {
-      headers: {
-        method: POST,
-        API_KEY,
-      }
-    }) 
-    const addressData = response.json()
-    
-    console.log(addressData)   
-    setAddressData(addressData)
-  }
-
-  useEffect(() => {
-    fetchData
-  }, [addressData]) 
   
   const pClasses = 'font-semibold text-2xl'
   const hClasses = 'text-darkGray uppercase font-semibold'
