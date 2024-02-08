@@ -14,7 +14,7 @@ export default function Map() {
 
   // Initialize the map with useEffect. This code will be invoked after the app is inserted in the DOM tree
   useEffect(() => {
-    if (!map.current) return;
+    if (map.current) return;
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v12",
@@ -30,6 +30,9 @@ export default function Map() {
 
   return (
     <div>
+      <div className="bg-[#23374b] text-white px-3 py-2 z-10 absolute top-0 left-0 m-3 rounded-md">
+        Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+      </div>
       <div ref={mapContainer} className="h-96 -z-10 "></div>
     </div>
   );
