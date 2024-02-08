@@ -13,15 +13,19 @@ export default function Map() {
   const [zoom, setZoom] = useState(9);
 
   // Initialize the map with useEffect. This code will be invoked after the app is inserted in the DOM tree
-useEffect(() => {
-  if (!mapContainer.current) return;
-  map.current = new mapboxgl.Map({
-    container: mapContainer.current,
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [lng, lat],
-    zoom: zoom
-  })
+  useEffect(() => {
+    if (!map.current) return;
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: "mapbox://styles/mapbox/streets-v12",
+      center: [lng, lat],
+      zoom: zoom,
+    });
+  });
 
-})
-
+  return (
+    <div>
+      <div ref={mapContainer} className="h-96 -z-10"></div>
+    </div>
+  );
 }
