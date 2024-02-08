@@ -21,11 +21,16 @@ export default function Map() {
       center: [lng, lat],
       zoom: zoom,
     });
+    map.current.on("move", () => {
+      setLng(map.current.getCenter().lng.toFixed(4));
+      setLat(map.current.getCenter().lat.toFixed(4));
+      setZoom(map.current.getZoom().toFixed(2));
+    });
   });
 
   return (
     <div>
-      <div ref={mapContainer} className="h-96 -z-10"></div>
+      <div ref={mapContainer} className="h-96 -z-10 "></div>
     </div>
   );
 }
